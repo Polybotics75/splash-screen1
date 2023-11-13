@@ -1,0 +1,251 @@
+@font-face{
+    font-family: sora-bold;
+    src: url('./sora_bold.ttf');
+}
+
+@font-face{
+    font-family: sora-semibold;
+    src: url('./sora_semibold.ttf');
+}
+
+@font-face{
+    font-family: sora-regular;
+    src: url('./sora_regular.ttf');
+}
+
+:root{
+    --white: #FAFAFA;
+    --pale: #EEEEEE;
+    --dpale: #D3D3D3;
+    --black: #121212;
+    --primary: #d29ef0;
+    
+    /*FONT*/
+    --bold: sora-bold;
+    --semibold: sora-semibold;
+    --normal: sora-regular
+}
+
+body.dark{
+    --white: #121212;
+    --pale: #D3D3D3;
+    --dpale: #EEEEEE;
+    --black: #FAFAFA;
+}
+
+*,
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    background: var(--white);
+}
+
+.fw{
+    width: 100%;
+}
+
+.tc{
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+}
+
+.ac{
+    align-items: center;
+}
+
+.jc{
+    justify-content: center;
+}
+
+
+
+
+.switch-tab{
+    height: 4rem;
+    justify-content: flex-end;
+    padding: 5px 15px;
+    border-bottom: 1px solid var(--pale);
+    background: var(--white);
+}
+
+.switch-cont{
+    height: 100%;
+}
+
+.switch-title{
+    font: 14px var(--semibold);
+    color: var(--black);
+    margin-right: 15px;
+}
+
+.switch-box{
+    width: 60px;
+    height: 25px;
+    border-radius: 1.2rem;
+    background: var(--pale);
+}
+
+.switch-toggle{
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--pale);
+    border-radius: 50%;
+    background: var(--white);
+    margin-left: 0;
+    font-size: 16px;
+    color: var(--black);
+}
+
+/*SWITCH ACTIVE*/
+.switch-box.active{
+    background: var(--primary);
+}
+
+.switch-box.active .switch-toggle{
+    border: 2px dotted var(--primary);
+    margin-left: auto;
+}
+
+
+
+.loading-box{
+    width: 100%;
+    height: 300px;
+    background: var(--white);
+}
+
+.loading-container{
+    width: 110px;
+    height: 110px;
+    padding: 5px;
+    position: relative;
+}
+
+.loading-tab{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border-radius: 50%;
+    animation-name: rotateball;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.loading-ball{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--black);
+}
+
+.loading-tab:nth-child(1){
+    animation-delay: .3s;
+}
+
+.loading-tab:nth-child(2){
+    animation-delay: .7s;
+}
+
+.loading-tab:nth-child(2) .loading-ball{
+    background: var(--primary);
+}
+
+.loading-tab:nth-child(3){
+    animation-delay: 1s;
+}
+
+.loading-tab:nth-child(4){
+    animation-delay: 1.6s;
+}
+
+.loading-tab:nth-child(4) .loading-ball{
+    background: var(--primary);
+}
+
+.loading-tab:nth-child(5){
+    animation-delay: 2.2s;
+}
+
+.loading-tab:nth-child(6){
+    animation-delay: 2.5s;
+}
+
+.loading-tab:nth-child(6) .loading-ball{
+    background: var(--primary);
+}
+
+
+
+
+.logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--black);
+    background: var(--white);
+    font-size: 30px;
+    color: var(--black);
+}
+
+/*ANIMATIONS*/
+
+@keyframes rotateball{
+    0%{
+        transform: rotate(0deg);
+    }
+    
+    30%{
+        transform: rotate(180deg);
+    }
+    
+    60%{
+        transform: rotate(270deg);
+    }
+    
+    90%{
+        transform: rotate(300deg);
+    }
+    
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+.title-box{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px 0 10px;
+}
+
+.title{
+    font: 18px var(--bold);
+    color: var(--black);
+}
+
+.title-from{
+    font: 10px var(--normal);
+    color: var(--dpale);
+    margin: 10px 0;
+}
+
+.title-tag{
+    font: 11px var(--semibold);
+    color: var(--black);
+}
